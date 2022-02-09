@@ -1,12 +1,12 @@
-const express = require('express');
-const app=express();
-
 const path = require('path')
 
-const controlador = {
+const mainController = {
     home : (req, res) => {
         res.sendFile(path.join(__dirname,"../views/home.html"))
     },
-};
+    about: (req, res) => {
+        res.sendFile(path.join(__dirname,"../views/about.html"))
+},
+}
 
-module.exports = controlador;
+module.exports = mainController;
